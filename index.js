@@ -6,24 +6,24 @@ const app = express()
 const cors = require("cors")
 const port = process.env.PORT || 3001
 
-var connection = mysql.createConnection({
-    host: 'localhost',
-    database: 'nemshop',
-    user: 'root',
-    password: 'password',
-  });
+// var connection = mysql.createConnection({
+//     host: 'localhost',
+//     database: 'nemshop',
+//     user: 'root',
+//     password: 'password',
+//   });
   
-  connection.connect()
+//   connection.connect()
 // Page Home
 
-app.get('/home', (req, res) => {
-    connection.query(`SELECT * FROM hocsinh`, (err, data) => {
-      if (err) throw err;
-      res.json(data)
+// app.get('/home', (req, res) => {
+//     connection.query(`SELECT * FROM hocsinh`, (err, data) => {
+//       if (err) throw err;
+//       res.json(data)
      
      
-    });
-  }),
+//     });
+//   }),
 app.get("/", (req, res) => {
     res.send('SERVER ON')
 })
